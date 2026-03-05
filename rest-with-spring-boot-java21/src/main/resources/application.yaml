@@ -1,3 +1,22 @@
 spring:
   application:
     name: rest-with-spring-boot-java21
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.18.83:3306/rest_with_spring_boot_erudio
+    username: root
+    password: PASSWORD
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    open-in-view: false
+logging:
+  level:
+#    root: WARN
+    br.com.ehc: DEBUG
+
+  spring-doc:
+    paths-to-match: /api/v1/**/**
+    swagger-ui:
+      use-root-patch: true
